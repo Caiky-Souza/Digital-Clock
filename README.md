@@ -2,7 +2,7 @@
 Just a simple web digital clock made in javascript that displays current time, made for javascript training.
 
 
-Live deploy:
+Live deploy: https://caiky-souza.github.io/Digital-Clock/templates/index.html
 
 # Technologies
 
