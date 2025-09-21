@@ -1,0 +1,79 @@
+:root {
+    --background-color: #14130f;
+    --card-color: black;
+    --h1-primary-color: red;
+    --h1-secondary-color: rgb(176, 8, 8); 
+    --base-font-size: 16px;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body {
+    width: 100dvw;
+    height:100dvh;
+    background-color: var(--background-color);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.main-clock-container {
+    background-color: var(--card-color);
+    border-radius: 15px;
+    padding:1rem 2rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.565);
+    width: 80%;
+    max-width:600px;
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.main-clock-container:hover {
+    transform:translatey(-50px)
+}
+.clock-h1 {
+    font-family: "Silkscreen";
+    color: var(--h1-primary-color);
+    transition: 0.5s;
+    font-size: calc(var(--base-font-size) * 3);
+    padding: 2.5rem 0;
+    animation: clockH1 3s infinite alternate linear;
+    
+    
+}
+@keyframes clockH1{
+    from{
+        transform: scale(1);
+        color: var(--h1-secondary-color);
+        text-shadow: none;
+        
+    }
+    to {
+        transform:scale(1.025);
+        color: var(--h1-primary-color);
+        text-shadow: 2px 2px 10px red;
+    }
+}
+
+@media (min-width: 500px)
+{
+    :root {
+        --base-font-size: 24px;
+    }
+}
+
+@media (min-width: 700px)
+{
+    :root {
+        --base-font-size: 45px;
+    }
+}
